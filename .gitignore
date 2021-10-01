@@ -3,7 +3,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=dotenv,venv,python,visualstudiocode
 
 ### dotenv ###
-.env
+# .env
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

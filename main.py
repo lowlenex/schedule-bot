@@ -44,12 +44,13 @@ def start(update: Update, context):
     }
 
     response: Response = requests.get(TIME_API_URL).json()
+    
     week_number: int = int(response['week_number'])
     day_number: int = int(response['day_of_week'])
 
     context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text=f'Расписание на {DAYS_IN_WEEK[day_number]}, {"четная" if week_number % 2 == 0 else "нечетная"} неделя'
+        text=f'Расписание на {DAYS_IN_WEEK[day_number]}, {"четная" if week_number % 2 == 0 else "нечетная"} неделя:'
     )
 
 
